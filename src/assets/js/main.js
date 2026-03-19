@@ -4,15 +4,44 @@ import fetchSalesPoints from './fetchSalesPoints.js';
 const loadSnacksBtn = document.querySelector('#load-snacks-btn');
 const snacksContainer = document.querySelector('#snacks-container');
 const feedback = document.querySelector('#feedback');
+
 const sales_pointsContainer = document.querySelector('#sales_points-container');
-const spfeedback = document.querySelector('#feedback');
+const spfeedback = document.querySelector('#sp_feedback');
+const loadSalesPointsBtn = document.querySelector('#load-salespoints-btn');
+const salesPointsSection = document.querySelector('.sales-points-section');
 
 // TODO task004: ajouter les références DOM nécessaires pour les points de vente
 // TODO task004: prévoir une variable d'état pour éviter de recharger inutilement les données
 
-loadSnacksBtn.addEventListener('click', loadSnacks);
-// TODO task004: brancher ici l'événement du bouton des points de vente
+let salesPointsVisible = false; // section cachée par défaut
+let salesPointsData = null;
 
+// TODO task004: brancher ici l'événement du bouton des points de vente
+loadSalesPointsBtn.addEventListener('click', loadSalesPoints);
+
+loadSalesPointsBtn.addEventListener('click', async () => {
+  if (!salesPointsVisible) {
+
+    // Cela permet de charger les données uniquement la première fois
+    if (!salesPointsData) {
+      try {
+        salesPointsData = await fetchSalesPoints();
+        displaySalesPoints(salesPointsData);
+      } catch (error) {
+        console.error(error);
+        spFeedback.textContent = 'Impossible de charger les points de vente.';
+        return;
+      }
+    }
+    salesPointsSection.style.display = 'block';
+    loadSalesPointsBtn.textContent = 'Hide Sales Points';
+    salesPointsVisible = true;
+  } else {
+    salesPointsSection.style.display = 'none';
+    loadSalesPointsBtn.textContent = 'Show Sales Points';
+    salesPointsVisible = false;
+  }
+});
 async function loadSnacks() {
   feedback.textContent = '';
 
@@ -59,8 +88,8 @@ async function loadSalesPoints() {
 function displaySalesPoints(sales_points) {
   sales_pointsContainer.innerHTML = sales_points.map((sp) => `
     <article class="sales-point-card">
-      <article className="sales-point-card">
-        <h3>${sp.bulding}</h3>
+      
+        <h3>${sp.building}</h3>
         <p><strong>Salle :</strong> ${sp.room}</p>
         <p><strong>Horaires :</strong> ${sp.openingHours}</p>
         <p><strong>Email :</strong>${sp.email}</p>
