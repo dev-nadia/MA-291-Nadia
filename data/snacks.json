@@ -1,34 +1,34 @@
 [
   {
-    "name": "CLASSICAL SANDWICH",
+    "name": "Classic Sandwich",
     "alt": "Classic Sandwich",
     "description": "Fresh bread, salad and cheese prepared every morning.",
     "price": 7.5,
     "imageUrl": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=80"
   },
   {
-    "name": "BERRY YOGURT CUP",
+    "name": "Berry Yogurt Cup",
     "alt": "Berry Yogurt Cup",
     "description": "Creamy yogurt with berries and granola.",
     "price": 5.2,
     "imageUrl": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80"
   },
   {
-    "name": "VEGGIE WRAP",
+    "name": "Veggie Wrap",
     "alt": "Veggie Wrap",
     "description": "A light wrap with crunchy vegetables and herbs.",
     "price": 6.8,
     "imageUrl": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=900&q=80"
   },
   {
-    "name": "KÄGI FRET",
+    "name": "Kägi fret",
     "alt": "Kägi fret",
     "description": "Crispy wafers with creamy filling, covered in milk chocolate.",
     "price": 2.1,
     "imageUrl": "https://media.schaefer-shop.de/is/image/schaefershop/webp1200/kaegi-fret-50-g-img_WS_560676_A"
   },
   {
-    "name": "TREK COCOA COCONUT",
+    "name": "Trek Cocoa Coconut",
     "alt": "Trek Cocoa Coconut",
     "description": "Vegan oat bar with coconut flakes and chocolate.",
     "price": 2.3,

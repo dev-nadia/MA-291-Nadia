@@ -17,23 +17,40 @@
     </header>
 
     <main class="page">
+      <!-- ----------------------------
+       Barre d'outils / Toolbar
+       Contient les boutons pour charger les données
+       ---------------------------- -->
       <section class="toolbar">
+        <!-- Bouton pour charger les snacks -->
         <button id="load-snacks-btn" type="button">Load snacks</button>
         <!-- TODO task004: ajouter le bouton pour les points de vente -->
+        <!-- Bouton pour charger les points de vente  -->
         <button id="load-salespoints-btn" type="button">Load Sales Points</button>
       </section>
 
+       <!-- ----------------------------
+       Section des snacks
+       Affiche les snacks disponibles sur le campus
+       ---------------------------- -->
       <section>
         <h2>Nos snacks</h2>
+        <!-- Message de feedback ou d'erreur pour les snacks -->
         <div id="feedback" class="feedback" aria-live="polite"></div>
+        <!-- Conteneur où les cartes de snacks seront injectées via JS -->
         <div id="snacks-container" class="cards"></div>
       </section>
 
       <!-- TODO task003: ajouter ici le conteneur de la section des points de vente -->
-
+  <!-- ----------------------------
+       Section des points de vente
+       TODO task003 : ajouter ici le conteneur si nécessaire
+       ---------------------------- -->
       <section class="sales-points-section">
           <h2>Nos points de vente</h2>
+        <!-- Message de feedback ou d'erreur pour les points de vente -->
             <div id="sp_feedback" class="sp_feedback" aria-live="polite"></div>
+         <!-- Conteneur où les cartes de points de vente seront injectées via JS -->
             <div id="sales_points-container" class="sales-points-grid "></div>
       </section>
 
